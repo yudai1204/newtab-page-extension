@@ -16,7 +16,7 @@ const GoogleIcons = (props: GoogleIconsProps) => {
           alignItems: "center",
           justifyContent: "center",
           flexDirection: "column",
-          width: 85,
+          width: 80,
           height: 90,
           aspectRatio: 1,
           color: "text.primary",
@@ -73,62 +73,62 @@ export const GoogleMenu = () => {
           boxShadow: "2px 4px 8px 0 #0004",
           display: isOpen ? "block" : "none"
         }}>
-        <Box
-          sx={{
-            display: "grid",
-            background: "#f8fafd",
-            gap: 1,
-            width: "100%",
-            height: "100%",
-            borderRadius: 4,
-            padding: 3,
-            gridTemplateColumns: "repeat(3, 1fr)"
-          }}>
-          <GoogleIcons
-            iconUrl="gmail.png"
-            url="https://mail.google.com/"
-            title="Gmail"
-          />
-          <GoogleIcons
-            iconUrl="maps.png"
-            url="https://maps.google.com/"
-            title="マップ"
-          />
-          <GoogleIcons
-            iconUrl="youtube.png"
-            url="https://www.youtube.com/"
-            title="YouTube"
-          />
-          <GoogleIcons
-            iconUrl="translate.png"
-            url="https://translate.google.com/"
-            title="翻訳"
-          />
-          <GoogleIcons
-            iconUrl="drive.png"
-            url="https://drive.google.com/"
-            title="ドライブ"
-          />
-          <GoogleIcons
-            iconUrl="spreadsheet.png"
-            url="https://docs.google.com/spreadsheets/"
-            title="スプレッドシート"
-          />
-          <GoogleIcons
-            iconUrl="slide.png"
-            url="https://docs.google.com/presentation/"
-            title="スライド"
-          />
-          <GoogleIcons
-            iconUrl="document.png"
-            url="https://docs.google.com/document/"
-            title="ドキュメント"
-          />
-          <GoogleIcons
-            iconUrl="analytics.png"
-            url="https://analytics.google.com/"
-            title="アナリティクス"
-          />
+        <Box sx={{ background: "#f8fafd", padding: 2, borderRadius: 4 }}>
+          <Box
+            sx={{
+              display: "grid",
+              gap: 1,
+              width: "100%",
+              height: "100%",
+              padding: 0,
+              gridTemplateColumns: "repeat(3, 1fr)"
+            }}>
+            <GoogleIcons
+              iconUrl="gmail.png"
+              url="https://mail.google.com/"
+              title="Gmail"
+            />
+            <GoogleIcons
+              iconUrl="maps.png"
+              url="https://maps.google.com/"
+              title="マップ"
+            />
+            <GoogleIcons
+              iconUrl="youtube.png"
+              url="https://www.youtube.com/"
+              title="YouTube"
+            />
+            <GoogleIcons
+              iconUrl="translate.png"
+              url="https://translate.google.com/"
+              title="翻訳"
+            />
+            <GoogleIcons
+              iconUrl="drive.png"
+              url="https://drive.google.com/"
+              title="ドライブ"
+            />
+            <GoogleIcons
+              iconUrl="spreadsheet.png"
+              url="https://docs.google.com/spreadsheets/"
+              title="スプレッドシート"
+            />
+            <GoogleIcons
+              iconUrl="slide.png"
+              url="https://docs.google.com/presentation/"
+              title="スライド"
+            />
+            <GoogleIcons
+              iconUrl="document.png"
+              url="https://docs.google.com/document/"
+              title="ドキュメント"
+            />
+            <GoogleIcons
+              iconUrl="analytics.png"
+              url="https://analytics.google.com/"
+              title="アナリティクス"
+            />
+          </Box>
         </Box>
       </Box>
     </Box>
