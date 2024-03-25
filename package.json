@@ -10,7 +10,13 @@
     "package": "plasmo package"
   },
   "dependencies": {
-    "plasmo": "0.85.2",
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.14",
+    "@mui/material": "^5.15.14",
+    "@plasmohq/messaging": "^0.6.2",
+    "plasmo": "^0.74.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
@@ -24,6 +30,16 @@
     "typescript": "5.3.3"
   },
   "manifest": {
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "assets/*"
+        ],
+        "matches": [
+          "https://*/*"
+        ]
+      }
+    ],
     "host_permissions": [
       "https://*/*"
     ]
