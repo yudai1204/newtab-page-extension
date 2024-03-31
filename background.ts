@@ -1,14 +1,14 @@
-import type { PlasmoMessaging } from "@plasmohq/messaging"
-
-const handler: PlasmoMessaging.MessageHandler = async (req, res) => {
-  console.log(req)
-  const url = `https://corsproxy.io/?https%3A%2F%2Fwww.google.com%2Fcomplete%2Fsearch%3Fhl%3Dja%26q%3D${req.name}%26output%3Dtoolbar`
-  const result = await fetch(url)
-  const xml = await result.text()
-
-  res.send({
-    xml
-  })
-}
-
-export default handler
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.message === "googleSuggest") {
+    fetch(
+      "https://www.google.com/complete/search?hl=ja&q=" +
+        encodeURIComponent(request.query) +
+        "&output=toolbar"
+    )
+      .then((response) => response.text())
+      .then((data) => {
+        sendResponse(data)
+      })
+    return true
+  }
+})

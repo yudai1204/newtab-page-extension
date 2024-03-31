@@ -16,11 +16,10 @@ export const GoogleSearchBox = () => {
 
   const onChangeSearchBox = (value: string) => {
     const resolver = async () => {
-      const val = encodeURIComponent(value)
-      const url = `https://corsproxy.io/?https%3A%2F%2Fwww.google.com%2Fcomplete%2Fsearch%3Fhl%3Dja%26q%3D${val}%26output%3Dtoolbar`
-      const res = await fetch(url)
-      // parse as xml
-      const xml = await res.text()
+      const xml = await chrome.runtime.sendMessage({
+        message: "googleSuggest",
+        query: value
+      })
       const parser = new DOMParser()
       const doc = parser.parseFromString(xml, "application/xml")
       const suggestions = doc.getElementsByTagName("suggestion")
