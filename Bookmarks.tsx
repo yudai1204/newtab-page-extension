@@ -29,6 +29,16 @@ export const Bookmarks = () => {
       url: "https://chat.openai.com"
     },
     {
+      title: "Claude",
+      imageUrl: "claude.png",
+      url: "https://claude.ai/chats"
+    },
+    {
+      title: "Chatwork",
+      imageUrl: "chatwork.png",
+      url: "https://www.chatwork.com/"
+    },
+    {
       title: "ScombZ",
       imageUrl: "scombz.png",
       url: "https://scombz.shibaura-it.ac.jp"
@@ -47,12 +57,12 @@ export const Bookmarks = () => {
   return (
     <Box
       display="grid"
-      gap={4}
+      gap={3}
       width="100%"
       height="100%"
       borderRadius={4}
-      padding={3}
-      gridTemplateColumns="repeat(4, 1fr)">
+      padding={0}
+      gridTemplateColumns="repeat(5, 1fr)">
       {bookmarks.map((bookmark) => (
         <a
           key={bookmark.title}
